@@ -1,26 +1,31 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Player : MonoBehaviour
 {
-    public float movementSpeed = 5f;
+    //Kontrollerer hvor fort spilleren beveger seg
+    public float moveSpeed = 10.0f; //default speed, kan endres etter ønske
 
-    // Start er kalt før den første frame update
+    public Rigidbody2D player;
+
+    // Bruk dette for initialisering
     void Start()
     {
-        
+        player = this.GetComponent<Rigidbody2D>();
     }
 
-    // Update er kalt på en gang per frame
-    void Update()
+    // Update er kalt en gang per frame
+    void FixedUpdate()
     {
-        // Bruker unity sin input klasse
-        float horizontalInput = Input.GetAxis("Horizontal"); 
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Endre spillerens posisjon basert på input og hastighet
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * movementSpeed * Time.deltaTime;
-        transform.position += movement;
+        MovePlayer();
+    }
+    // Denne funksjonen gjør at spilleren kan bevege seg
+    public void MovePlayer()
+    {
+        // Bevegelse
+        player.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * moveSpeed;
 
     }
 }

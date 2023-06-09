@@ -1,1 +1,2 @@
 # Eksamen-V-2023
+Hei vi er gruppe 22 og dette er vårt unity spill. Gruppen har prøvd å løse alle oppgavene best mulig, men hadde noe komplikasjoner underveis. Oppgave 6c er ikke comittet i git da den ble implementert rett inn i unity. 6a løste gruppen delvis, men ble ikke like optimalt som ønsket. Gruppen fokuserte heller å få frem all kunnskap de kunne, og prøvde å løse oppgavene til punkt og prikke etter deres evne. Det meste er gjort, men ikke sikkert alt er like optimalt som ønsket.
